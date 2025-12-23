@@ -1,161 +1,170 @@
 html {
-    font-size: clamp(14px, 1.5vw, 18px);
+  font-size: clamp(14px, 1.5vw, 18px);
+  scroll-behavior: smooth;
 }
 body {
-    margin: 0;
-    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    background-color: #edfaff;
-}
-header {
-    margin: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background-color: #edfaff;
+  scroll-snap-type: y mandatory;
 }
 .overview {
-    background-color: #8fd8fb;
-    border: double 3px #061af8;
-    text-align: center;
-    padding: 0px 20%;
+  background-color: #8fd8fb;
+  border: double 3px #061af8;
+  text-align: center;
+  padding: 0 clamp(16px, 5vw, 120px);
 }
 .overview-list {
-    list-style: none;
-    padding: 5px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
+  list-style: none;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: bold;
 }
 .overview-list a{
-    color: #000000;
-    text-decoration: none;       
+  color: #000000;
+  text-decoration: none;       
 }
 .overview-list a:hover {
-    color: #00c3ff;
-    text-decoration: underline;
+  color: #00c3ff;
+  text-decoration: underline;
 }
 .header-content {
-    position: relative;
-    width: 100%;
-    height: 800px;
-    overflow: hidden;
-    padding: 500px auto;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #header-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center center;
-    z-index: -1;
-    transition: background-image 1.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+  transition: background-image 1.5s ease-in-out;
 }
 header h1 {
-    text-align: center;
-    font-weight: 300;
-    font-style: italic;
-    color: #8fd8fb;
-    font-size: 5rem;
-    padding: auto;
-    margin-top: 200px;
+  text-align: center;
+  font-weight: 300;
+  font-style: italic;
+  color: #8fd8fb;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 .header-bottom {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 30px 0;
-    background-image: url(/images/background-images/S__58540038_0.jpg);
+  align-items: stretch;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 0;
+  background-image: url(/images/background-images/S__58540038_0.jpg);
 }
 .omikuji-obj {
-    text-align: center;
-    padding: 10px 50px;
-    font-size: 0.7em;
-    margin: 10px 10%;
-    border: double 15px #fe0000;
-    height: auto;
-    width: 400px;
-    background-color: #fff0f5;
-}
-.omikuji-result img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 10px 50px;
+  width: 400px;
+  margin: 10px 10%;
+  font-size: 0.7em;
+  border: double 15px #fe0000;
+  height: auto;
+  
+  background-color: #fff0f5;
 }
 .omikuji-headline {
-    font-size: 25px;
-    font-weight: bold;
-    background-color: #fe0000;
-    color: #fff;
-    padding: 10px;
-    font-family: "Yu Mincho", "serif";
-    font-weight: 400;
-    border: double 5px #fff;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #fe0000;
+  color: #fff;
+  padding: 10px;
+  font-family: "Yu Mincho", "serif";
+  font-weight: 400;
+  border: double 5px #fff;
 }
 .omikuji-result {
-    width: 100%;
-    height: 400px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.omikuji-result img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 .omikuji-button {
-    background-color: #ff0000;
-    color: #fff;
-    font-style: "Yu Mincho", "serif";
-    font-weight: 400;
-    width: 90%;
-    border: double 5px #fff;
-    cursor: pointer;
-    font-size: 20px;
-    font-style: italic;
-    padding: 10px;
+  background-color: #ff0000;
+  color: #fff;
+  font-family: "Yu Mincho", "serif";
+  font-weight: 400;
+  width: 90%;
+  border: double 5px #fff;
+  cursor: pointer;
+  font-size: 20px;
+  font-style: italic;
+  padding: 10px;
 }
 .fade {
-    opacity: 0;
-    transition: opacity 0.8s ease;
+  opacity: 0;
+  transition: opacity 0.8s ease;
 }
 .fade.is-show {
-    opacity: 1;
+  opacity: 1;
 }
 .omikuji-text {
-    font-weight: bold;
-    margin-top: 80px;
-    width: 300px;
-    height: 400px;
-    padding: 30px 50px;
-    border: double 5px #ff0000;
-    background-color: #fff0f5;
-    font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 80px; /*おみくじ画像とのバランス用 */
+  width: 300px;
+  height: 400px;
+  padding: 30px 50px;
+  border: double 5px #ff0000;
+  background-color: #fff0f5;
+  font-size: 1.2em;
 }
 .omikuji-sub {
-    font-size: 0.85em;
-    margin-top: 4px;
-    min-height: 2.5em;
+  font-size: 0.85em;
+  margin-top: 4px;
+  min-height: 2.5em;
 }
 .message {
-    font-size: 1.5em;
-    margin-top: 10px;
-    min-height: 2.5em;
+  font-size: 1.5em;
+  margin-top: 10px;
+  min-height: 2.5em;
 }
 .profile {
-    display: flex;
-    align-items: center;
-    margin: 50px auto;
-    gap: 30px;
-    flex-direction: row-reverse;
-    max-width: 900px;
-    padding-right: 50px;
+  display: flex;
+  align-items: center;
+  margin: 50px auto;
+  gap: 30px;
+  flex-direction: row-reverse;
+  max-width: 900px;
+  padding-right: 50px;
 }
 .profile-text {
-    font-size: 1.2em;
-    text-align: left;
+  font-size: 1.2em;
+  text-align: left;
 }
 .photo {
-    width: 400px;
-    height: 450px;
-    border-radius: 20%;
-    object-fit: cover;
-    border: double 5px #000000;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  height: 450px;
+  border-radius: 20%;
+  object-fit: cover;
+  border: double 5px #000000;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
-.workIntoroduction {
+.workIntroduction {
   padding: 40px 20px;
   max-width: 800px;
   margin: 0 auto;
@@ -189,10 +198,12 @@ header h1 {
 }
 .contact {
   padding: 60px 20px;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
-.contact h2 {
+.contact h2, 
+.contact p,
+.contact address {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -238,4 +249,18 @@ textarea:focus {
 }
 .submit-btn:hover {
   opacity: 0.85;
+}
+/* media resposive */
+@media (max-width: 768px) {
+  .header-bottom {
+    display: none;
+  }
+  .profile {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .photo {
+    width: 80%;
+    height: auto;
+  }
 }
