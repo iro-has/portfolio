@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>株式会社ロジギオ-HP</title>
+    <meta name="description" content="Web制作会社 Sample Webのリクルートサイト">
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Lobster&family=Noto+Serif+JP:wght@200..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- ヘッダー部分 -->
+    <header>
+        <div class="container header-inner">
+            <h1 class="logo">株式会社ロジギオ</h1>
+            <nav>
+                <ul class="g-nav">
+                    <li><a href="./index.html">ホーム</a></li>
+                    <li><a href="#about">会社概要</a></li>
+                    <li><a href="#service">業務内容</a></li>
+                    <li><a href="#achievement">実績</a></li>
+                    <li><a href="./recruit.html" rel="noopener noreferrer">採用情報</a></li>
+                    <li><a href="./contact.html" rel="noopener noreferrer">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>        
+    </header>
+    <!-- メイン部分 -->
+    <main>
+        <!-- 背景に画像を使用し、文字は右下に -->
+        <div class="container main-inner">
+            <section class="hero">
+                <div class="hero-inner">
+                    <h2 class="hero-title">～「やりたい」を現実に～</h2>
+                    <p>お客様一人一人のご要望に応じて、納得いくまで作り続けます。</p>
+                </div>                
+            </section>
+        </div>
+        <!-- 会社概要部分、幅は目いっぱいに。  -->
+        <div class="about-full">
+            <section class="container about-inner">
+                <h2 class="section-title" id="about">会社概要</h2>
+                <div class="wrapper-about">
+                    <div class="about-l">
+                        <h4 class="cp-title">企業理念</h4>
+                        <p class="line-underline">
+                            私たちの会社はお客様、従業員、関わる全ての方々の「やりたい」と思うことを現実にできるよう、全力でサポートします。
+                            一人一人の「やりたい」と思う気持ちが集まることで、大きな力となり、よりよいものを生み出せるという信念のもと、日々業務に取り組んでいます。
+                        </p>
+                    </div>
+                    <div class="about-r">
+                        <div class="wrapper-icons">
+                            <ul class="sns-list">
+                                <li>
+                                    <a href="https://www.facebook.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="X（旧Twitter）">
+                                    <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="./about.html" target="_blank" rel="noopener noreferrer" class="p-j-btn about-page">詳しくはこちら</a>
+                    </div>                    
+                </div>
+            </section>            
+        </div>
+        <!-- 業務内容。カード化して流す。 -->
+        <section class="container service-inner">
+            <h3 class="section-title" id="service">業務内容</h3>
+            <div class="item-wrapper">
+                <ul class="service-list">
+                    <li class="service-item">
+                        <h4>webサイト制作</h4>
+                        <p>コーポレートサイトや個人のHP等の制作を承ります。</p>
+                    </li>
+                    <li class="service-item">
+                        <h4>UI / UXデザイン</h4>
+                        <p>ユーザー目線で使いやすい設計を行います。</p>
+                    </li>
+                    <li class="service-item">
+                        <h4>レスポンシブ対応</h4>
+                        <p>スマホからタブレットまで、幅広いデバイスに対応したデザインを作ります。</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="achievement" class="container achievement">
+            <h3 class="section-title">実績</h3>
+            <div class="achievement-inner">
+                <div class="achievement-text">
+                    <p>
+                        株式会社ロジギオでは、コーポレートサイトを中心に、
+                        多様な業種のWeb制作を手がけてきました。
+                    </p>
+                </div>
+                <div class="achievement-graph">
+                    <div class="ct-chart"></div>
+                </div>
+            </div>
+        </section> 
+    </main>
+
+    <footer>
+        <section class="container recruit-inner">
+            <a href="./recruit.html" target="_blank" rel="noopener noreferrer" class="p-j-btn recruit-page">採用情報ページはこちら</a>
+        </section>
+        <section class="container contact-inner">
+            <a href="./contact.html" target="_blank" rel="noopener noreferrer" class="p-j-btn contact-page">お問い合わせはこちら</a>
+        </section>
+        <p class="cp-logo">© 2026 株式会社ロジギオ</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chartist@0.11.4/dist/chartist.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
